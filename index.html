@@ -1,152 +1,104 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Gautam Dev | DevOps Engineer</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #e2e8f0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #38bdf8;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        a {
-            color: #38bdf8;
-        }
-    </style>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gautam Dev | DevOps Engineer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
 
+    header {
+      padding: 20px;
+      background: #020617;
+      text-align: center;
+      border-bottom: 1px solid #22c55e;
+    }
+
+    h1 {
+      color: #22c55e;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .terminal {
+      background: #020617;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #22c55e;
+    }
+
+    .cmd {
+      color: #22c55e;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .project {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
 <body>
+
+<header>
+  <h1>Gautam Dev</h1>
+  <p>DevOps Engineer | Kubernetes | AWS | CI/CD</p>
+</header>
 
 <div class="container">
 
-```
-<!-- HERO -->
-<div class="section">
-    <h1>Gautam Dev</h1>
-    <p><b>DevOps Engineer | CKA Certified</b></p>
-    <p>Specializing in CI/CD pipelines and Kubernetes deployments</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a DevOps Engineer with a strong background in system administration, 
-        transitioning into cloud-native technologies driven by my interest in Linux, automation, and scalable systems.
-    </p>
-    <p>
-        I specialize in building automated CI/CD pipelines and deploying applications on Kubernetes using modern DevOps practices.
-    </p>
-</div>
-
-<!-- SKILLS -->
-<div class="section">
-    <h2>Skills</h2>
-    <div class="card">
-        <p><b>CI/CD:</b> Jenkins</p>
-        <p><b>Containers:</b> Docker</p>
-        <p><b>Orchestration:</b> Kubernetes (CKA Certified)</p>
-        <p><b>GitOps:</b> Argo CD</p>
-        <p><b>Templating:</b> Helm</p>
-        <p><b>Cloud:</b> AWS</p>
+  <div class="section">
+    <h2>💻 About Me</h2>
+    <div class="terminal">
+      <p><span class="cmd">$ whoami</span></p>
+      <p>DevOps Engineer with experience in Docker, Jenkins, Kubernetes & AWS.</p>
     </div>
-</div>
+  </div>
 
-<!-- PROJECTS -->
-<div class="section">
-    <h2>Projects</h2>
+  <div class="section">
+    <h2>⚙️ Skills</h2>
+    <div class="terminal">
+      <p><span class="cmd">$ skills --list</span></p>
+      <p>Docker | Kubernetes | Jenkins | Terraform | AWS | Linux</p>
+    </div>
+  </div>
 
-    <!-- PROJECT 1 -->
-    <div class="card">
-        <h3>GitOps CI/CD Pipeline using Jenkins, Argo CD & Helm</h3>
-        <p>
-            Designed and implemented an end-to-end GitOps-based CI/CD pipeline that automates application delivery from code commit to Kubernetes deployment.
-        </p>
-
-        <p><b>Problem:</b> Manual deployments are error-prone and lack consistency.</p>
-
-        <p><b>Solution:</b> Implemented GitOps workflow where Jenkins updates Helm configurations and Argo CD ensures the cluster state matches Git.</p>
-
-        <p><b>Workflow:</b></p>
-        <p>GitHub → Jenkins → Docker → GitOps Repo → Argo CD → Kubernetes</p>
-
-        <p><b>Key Features:</b></p>
-        <ul>
-            <li>Automated build, test, and deployment</li>
-            <li>Health-check based validation before deployment</li>
-            <li>Helm-based Kubernetes configuration</li>
-            <li>Automatic sync using Argo CD</li>
-        </ul>
-
-        <p><b>GitHub:</b> <a href="#">Add your repo link</a></p>
+  <div class="section">
+    <h2>🚀 Projects</h2>
+    <div class="terminal project">
+      <p><span class="cmd">$ project deploy-cicd</span></p>
+      <p>CI/CD pipeline using Jenkins, Docker, ArgoCD & Kubernetes</p>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="card">
-        <h3>Production-Style CI/CD Pipeline with Jenkins & Kubernetes</h3>
-        <p>
-            Built a production-grade CI/CD pipeline for a Node.js application with robust testing, deployment validation, and rollback mechanisms.
-        </p>
-
-        <p><b>Problem:</b> Deployments can succeed even when applications fail in Kubernetes.</p>
-
-        <p><b>Solution:</b> Implemented rollout validation and multi-layer rollback using Helm and Kubernetes.</p>
-
-        <p><b>Workflow:</b></p>
-        <p>GitHub → Jenkins → Docker → Helm → Kubernetes → Validation → Rollback</p>
-
-        <p><b>Key Features:</b></p>
-        <ul>
-            <li>Automated container-based testing</li>
-            <li>Helm-based deployments</li>
-            <li>Rollout validation using Kubernetes</li>
-            <li>Automatic rollback on failure</li>
-        </ul>
-
-        <p><b>GitHub:</b> <a href="#">Add your repo link</a></p>
+    <div class="terminal project">
+      <p><span class="cmd">$ project k8s-app</span></p>
+      <p>Node.js app deployed on Kubernetes with Helm</p>
     </div>
+  </div>
 
-</div>
-
-<!-- CERTIFICATION -->
-<div class="section">
-    <h2>Certifications</h2>
-    <div class="card">
-        <p><b>Certified Kubernetes Administrator (CKA)</b></p>
+  <div class="section">
+    <h2>📞 Contact</h2>
+    <div class="terminal">
+      <p><span class="cmd">$ connect --linkedin</span></p>
+      <p><a href="#">LinkedIn Profile</a></p>
     </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: gautamaws777@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/gautamdevgrover">github.com/gautamdevgrover</a></p>
-    </div>
-</div>
-```
+  </div>
 
 </div>
 
 </body>
 </html>
-
