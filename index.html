@@ -1,19 +1,152 @@
 <!DOCTYPE html>
-<html>
-	<head>
 
-		<title> FIRST </title>
-		<link rel="stylesheet" href="design.css">
-	</head>
-	<body>
-		<h1> First Heading </h1>
-		<div> <img src="ssimage.png" alt="ss"></div>
-		<p color="red"> first paragraph </p>
-		<p> second paragraph </p>
-		<p> urgent worked done </p>
-		<div> <img src="ss2.png" alt="ss2"></div>
-		<p> testing third paragraph </p>
-		<p> testing fourth para </p>
-	
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gautam Dev | DevOps Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<!-- HERO -->
+<div class="section">
+    <h1>Gautam Dev</h1>
+    <p><b>DevOps Engineer | CKA Certified</b></p>
+    <p>Specializing in CI/CD pipelines and Kubernetes deployments</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a DevOps Engineer with a strong background in system administration, 
+        transitioning into cloud-native technologies driven by my interest in Linux, automation, and scalable systems.
+    </p>
+    <p>
+        I specialize in building automated CI/CD pipelines and deploying applications on Kubernetes using modern DevOps practices.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+    <h2>Skills</h2>
+    <div class="card">
+        <p><b>CI/CD:</b> Jenkins</p>
+        <p><b>Containers:</b> Docker</p>
+        <p><b>Orchestration:</b> Kubernetes (CKA Certified)</p>
+        <p><b>GitOps:</b> Argo CD</p>
+        <p><b>Templating:</b> Helm</p>
+        <p><b>Cloud:</b> AWS</p>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+    <h2>Projects</h2>
+
+    <!-- PROJECT 1 -->
+    <div class="card">
+        <h3>GitOps CI/CD Pipeline using Jenkins, Argo CD & Helm</h3>
+        <p>
+            Designed and implemented an end-to-end GitOps-based CI/CD pipeline that automates application delivery from code commit to Kubernetes deployment.
+        </p>
+
+        <p><b>Problem:</b> Manual deployments are error-prone and lack consistency.</p>
+
+        <p><b>Solution:</b> Implemented GitOps workflow where Jenkins updates Helm configurations and Argo CD ensures the cluster state matches Git.</p>
+
+        <p><b>Workflow:</b></p>
+        <p>GitHub → Jenkins → Docker → GitOps Repo → Argo CD → Kubernetes</p>
+
+        <p><b>Key Features:</b></p>
+        <ul>
+            <li>Automated build, test, and deployment</li>
+            <li>Health-check based validation before deployment</li>
+            <li>Helm-based Kubernetes configuration</li>
+            <li>Automatic sync using Argo CD</li>
+        </ul>
+
+        <p><b>GitHub:</b> <a href="#">Add your repo link</a></p>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card">
+        <h3>Production-Style CI/CD Pipeline with Jenkins & Kubernetes</h3>
+        <p>
+            Built a production-grade CI/CD pipeline for a Node.js application with robust testing, deployment validation, and rollback mechanisms.
+        </p>
+
+        <p><b>Problem:</b> Deployments can succeed even when applications fail in Kubernetes.</p>
+
+        <p><b>Solution:</b> Implemented rollout validation and multi-layer rollback using Helm and Kubernetes.</p>
+
+        <p><b>Workflow:</b></p>
+        <p>GitHub → Jenkins → Docker → Helm → Kubernetes → Validation → Rollback</p>
+
+        <p><b>Key Features:</b></p>
+        <ul>
+            <li>Automated container-based testing</li>
+            <li>Helm-based deployments</li>
+            <li>Rollout validation using Kubernetes</li>
+            <li>Automatic rollback on failure</li>
+        </ul>
+
+        <p><b>GitHub:</b> <a href="#">Add your repo link</a></p>
+    </div>
+
+</div>
+
+<!-- CERTIFICATION -->
+<div class="section">
+    <h2>Certifications</h2>
+    <div class="card">
+        <p><b>Certified Kubernetes Administrator (CKA)</b></p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: gautamaws777@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/gautamdevgrover">github.com/gautamdevgrover</a></p>
+    </div>
+</div>
+```
+
+</div>
+
+</body>
 </html>
+
