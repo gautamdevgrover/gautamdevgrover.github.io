@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gautam Dev | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#020617;
-  --card:#0f172a;
-  --accent:#00ff9f;
-  --accent2:#38bdf8;
-  --text:#e2e8f0;
-  --muted:#64748b;
+  --bg:#0a0e1a;
+  --card:#111827;
+  --accent:#00ff88;
+  --accent2:#00d4ff;
+  --text:#e5e7eb;
+  --muted:#6b7280;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
   font-family:'JetBrains Mono', monospace;
-  background: radial-gradient(circle at top,#020617,#000);
+  background: radial-gradient(circle at top,#0a0e1a,#000);
   color:var(--text);
 }
 
 header{
   text-align:center;
-  padding:80px 20px 40px;
+  padding:80px 20px;
 }
 
 h1{
@@ -36,9 +37,17 @@ h1{
   text-shadow:0 0 20px var(--accent);
 }
 
-.typing{color:var(--accent2);margin-top:10px;height:25px}
+.typing{
+  color:var(--accent2);
+  margin-top:10px;
+  height:25px;
+}
 
-.container{max-width:1100px;margin:auto;padding:20px}
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
 
 .grid{
   display:grid;
@@ -47,8 +56,8 @@ h1{
 }
 
 .card{
-  background:rgba(15,23,42,0.7);
-  border:1px solid rgba(0,255,159,0.2);
+  background:rgba(17,24,39,0.7);
+  border:1px solid rgba(0,255,136,0.2);
   padding:25px;
   border-radius:15px;
   backdrop-filter:blur(10px);
@@ -58,30 +67,30 @@ h1{
 .card:hover{
   transform:translateY(-8px);
   border-color:var(--accent);
-  box-shadow:0 0 30px rgba(0,255,159,0.3);
+  box-shadow:0 0 30px rgba(0,255,136,0.3);
 }
 
-h2{color:var(--accent);margin-bottom:15px;font-family:'Orbitron'}
+h2{
+  color:var(--accent);
+  margin-bottom:15px;
+  font-family:'Orbitron';
+}
 
 .cmd{color:var(--accent)}
 
-.project{margin-bottom:15px}
-
-.footer{text-align:center;padding:30px;color:var(--muted)}
-
-button{
-  margin-top:15px;
-  padding:10px 20px;
-  background:transparent;
-  border:1px solid var(--accent);
-  color:var(--accent);
-  cursor:pointer;
-  transition:0.3s;
+.project{
+  margin-bottom:20px;
 }
 
-button:hover{
-  background:var(--accent);
-  color:#000;
+a{
+  color:var(--accent2);
+  text-decoration:none;
+}
+
+.footer{
+  text-align:center;
+  padding:30px;
+  color:var(--muted);
 }
 
 </style>
@@ -97,63 +106,129 @@ button:hover{
 
 <div class="grid">
 
+<!-- ABOUT -->
 <div class="card">
 <h2>💻 About</h2>
 <p><span class="cmd">$ whoami</span></p>
-<p>Aspiring DevOps Engineer with 3.8 years of experience in Linux, Docker, Jenkins, Kubernetes and AWS. Passionate about automation and building scalable systems.</p>
+<p>Sysadmin with 3.8 years of experience transitioning into DevOps. Strong in Linux, Docker, and CI/CD automation. Passionate about building reliable systems and solving complex infrastructure issues.</p>
 </div>
 
+<!-- SKILLS -->
 <div class="card">
 <h2>⚙️ Skills</h2>
 <p><span class="cmd">$ skills --list</span></p>
-<p>Docker • Kubernetes • Jenkins • Terraform • Ansible • AWS • Linux • Git</p>
+<p>Docker • Kubernetes • Jenkins • AWS (EC2, S3, IAM, VPC, RDS) • Linux • Helm • Argo CD • Git • Bash • Ansible (basic)</p>
 </div>
 
+<!-- EXPERIENCE -->
 <div class="card">
-<h2>🚀 CI/CD Project</h2>
+<h2>🧠 Experience</h2>
+<p><span class="cmd">$ daily_work</span></p>
+<p>
+• Developer environment setup (PHP, MySQL, Elasticsearch, Docker, Jenkins, SonarQube)<br>
+• Linux server management & troubleshooting<br>
+• User management & system configuration<br>
+• Handling production-level issues & debugging<br>
+</p>
+</div>
+
+<!-- PROJECT 1 -->
+<div class="card">
+<h2>🚀 CI/CD Pipeline</h2>
+
 <div class="project">
 <p><span class="cmd">$ deploy pipeline</span></p>
-<p>End-to-end CI/CD using Jenkins → Docker → Helm → ArgoCD → Kubernetes</p>
-<button onclick="alert('Add GitHub link here')">View Code</button>
-</div>
+<p><b>Flow:</b><br>
+GitHub → Jenkins → Docker → Test → Push → Helm → Kubernetes</p>
+
+<p><b>Features:</b><br>
+• End-to-end CI/CD automation<br>
+• Auto rollback using Helm<br>
+• Rollout validation using kubectl<br>
+• Email notifications<br>
+• Docker-based testing</p>
+
+<p><b>Impact:</b><br>
+Fixed false deployment success issue using rollout verification</p>
 </div>
 
+</div>
+
+<!-- PROJECT 2 -->
 <div class="card">
-<h2>☸️ Kubernetes Project</h2>
+<h2>⚡ GitOps Pipeline</h2>
+
 <div class="project">
-<p><span class="cmd">$ kubectl apply -f app.yaml</span></p>
-<p>Deployed Node.js application on Kubernetes with Helm charts and auto scaling</p>
-</div>
+<p><span class="cmd">$ gitops deploy</span></p>
+
+<p><b>Flow:</b><br>
+Jenkins → Docker → GitOps Repo → ArgoCD → Kubernetes</p>
+
+<p><b>Features:</b><br>
+• Git as single source of truth<br>
+• Auto sync using Argo CD<br>
+• Health check before deploy<br>
+• Separate app & manifest repo</p>
+
+<p><b>Demo:</b><br>
+Push → Build → Update values.yaml → ArgoCD sync → App live</p>
+
 </div>
 
+</div>
+
+<!-- DIFFERENTIATOR -->
 <div class="card">
-<h2>☁️ Cloud</h2>
-<p><span class="cmd">$ terraform apply</span></p>
-<p>Provisioned AWS infrastructure using Terraform with modular approach</p>
+<h2>🔥 Strength</h2>
+<p><span class="cmd">$ mindset</span></p>
+<p>Linux-first mindset with strong troubleshooting skills. Able to debug real-world system issues and automate workflows efficiently.</p>
 </div>
 
+<!-- CONTACT -->
 <div class="card">
 <h2>📞 Contact</h2>
-<p><span class="cmd">$ connect --linkedin</span></p>
-<p>Add your LinkedIn + GitHub here</p>
-</div>
+<p><span class="cmd">$ connect</span></p>
+
+<p>Email: <a href="mailto:gautamdevgrover@gmail.com">gautamdevgrover@gmail.com</a></p>
+<p>GitHub: <a href="https://github.com/gautamdevgrover">github.com/gautamdevgrover</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/gautam-dev-094b1a26a/">linkedin.com/in/gautam-dev</a></p>
 
 </div>
 
 </div>
 
-<div class="footer">⚡ Built for DevOps Portfolio</div>
+</div>
+
+<div class="footer">⚡ Built with DevOps mindset</div>
 
 <script>
-const roles=["DevOps Engineer","Kubernetes","CI/CD","Cloud Automation"];
+const roles=[
+"DevOps Engineer",
+"Linux Troubleshooter",
+"Kubernetes Enthusiast",
+"CI/CD Builder"
+];
+
 let i=0,j=0,current='',del=false;
+
 function type(){
  current=roles[i];
  document.getElementById('typing').innerHTML=current.substring(0,j);
- if(!del && j++===current.length){del=true;setTimeout(type,1000);return}
- if(del && j--===0){del=false;i=(i+1)%roles.length}
+
+ if(!del && j++===current.length){
+  del=true;
+  setTimeout(type,1000);
+  return;
+ }
+
+ if(del && j--===0){
+  del=false;
+  i=(i+1)%roles.length;
+ }
+
  setTimeout(type,del?40:80);
 }
+
 type();
 </script>
 
