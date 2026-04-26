@@ -4,232 +4,174 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gautam Dev | DevOps Engineer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0a0e1a;
-  --card:#111827;
-  --accent:#00ff88;
-  --accent2:#00d4ff;
-  --text:#e5e7eb;
-  --muted:#6b7280;
-}
-
+:root{--bg:#05070d;--accent:#00ff88;--text:#e5e7eb;--muted:#6b7280}
 *{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  font-family:'JetBrains Mono', monospace;
-  background: radial-gradient(circle at top,#0a0e1a,#000);
-  color:var(--text);
-}
-
-header{
-  text-align:center;
-  padding:80px 20px;
-}
-
-h1{
-  font-family:'Orbitron';
-  font-size:3rem;
-  color:var(--accent);
-  text-shadow:0 0 20px var(--accent);
-}
-
-.typing{
-  color:var(--accent2);
-  margin-top:10px;
-  height:25px;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(17,24,39,0.7);
-  border:1px solid rgba(0,255,136,0.2);
-  padding:25px;
-  border-radius:15px;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  border-color:var(--accent);
-  box-shadow:0 0 30px rgba(0,255,136,0.3);
-}
-
-h2{
-  color:var(--accent);
-  margin-bottom:15px;
-  font-family:'Orbitron';
-}
-
-.cmd{color:var(--accent)}
-
-.project{
-  margin-bottom:20px;
-}
-
-a{
-  color:var(--accent2);
-  text-decoration:none;
-}
-
-.footer{
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
-}
-
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1}
+section{padding:80px 10%;max-width:1100px;margin:auto}
+h1,h2,h3{font-family:'Orbitron'}
+.hero{display:flex;align-items:center;justify-content:space-between;min-height:100vh;gap:50px}
+.hero-text h1{font-size:3.5rem;color:var(--accent)}
+.hero-text p{margin-top:20px;color:var(--muted);line-height:1.7;max-width:520px}
+.hero img{width:300px;border-radius:20px;border:2px solid var(--accent)}
+.section-title{font-size:2rem;margin-bottom:30px;color:var(--accent)}
+.about p{line-height:1.85;color:var(--muted);margin-bottom:16px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{border:1px solid var(--accent);padding:8px 14px;font-size:13px}
+.timeline{border-left:2px solid var(--accent);padding-left:20px}
+.timeline-item{margin-bottom:24px}
+.timeline-item h4{color:var(--accent)}
+.timeline-item p{color:var(--muted);font-size:14px;line-height:1.7}
+.block{margin-bottom:50px}
+.block h3{color:var(--accent);margin-bottom:10px}
+.block p{color:var(--muted);line-height:1.8;margin-bottom:10px}
+.block ul{padding-left:20px}
+.block li{margin-bottom:8px}
+.flow{font-family:monospace;color:var(--accent);margin:10px 0}
+.contact a{display:block;margin-bottom:8px;color:var(--accent)}
+footer{text-align:center;padding:30px;color:var(--muted)}
+@media(max-width:900px){.hero{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
+<canvas id="bg-canvas"></canvas>
 
-<header>
-  <h1>Gautam Dev</h1>
-  <div class="typing" id="typing"></div>
-</header>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Gautam Dev</h1>
+    <p>
+      Sysadmin → DevOps Engineer. I build CI/CD pipelines, automate environments, and troubleshoot Linux systems at depth.
+      Focused on <b>reliability, automation, and Kubernetes-based deployments</b>.
+    </p>
+  </div>
+  <img src="mypic.jpeg" alt="profile">
+</section>
 
-<div class="container">
+<section class="about">
+  <h2 class="section-title">About Me</h2>
+  <p>
+    I have 3.8 years of experience as a System Administrator where I handle developer environments, Linux servers,
+    and real-world troubleshooting. I specialize in setting up complete development stacks (LAMP/WAMP, Docker-based tools)
+    and ensuring developers can work without friction.
+  </p>
+  <p>
+    I am transitioning into DevOps by building real CI/CD and GitOps pipelines. My core strength is <b>Linux troubleshooting</b>
+    combined with <b>automation mindset</b> — I enjoy identifying bottlenecks and solving them with tools and scripts.
+  </p>
+</section>
 
-<div class="grid">
+<section>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill">Docker</div>
+    <div class="skill">Kubernetes</div>
+    <div class="skill">Jenkins</div>
+    <div class="skill">AWS (EC2,S3,IAM,VPC,RDS)</div>
+    <div class="skill">Linux</div>
+    <div class="skill">Helm</div>
+    <div class="skill">Argo CD</div>
+    <div class="skill">Git</div>
+    <div class="skill">Bash</div>
+    <div class="skill">Ansible (basic)</div>
+  </div>
+</section>
 
-<!-- ABOUT -->
-<div class="card">
-<h2>💻 About</h2>
-<p><span class="cmd">$ whoami</span></p>
-<p>Sysadmin with 3.8 years of experience transitioning into DevOps. Strong in Linux, Docker, and CI/CD automation. Passionate about building reliable systems and solving complex infrastructure issues.</p>
-</div>
+<section>
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>System Administrator</h4>
+      <p>
+        • Setup complete developer environments (PHP, MySQL, PostgreSQL, Elasticsearch, Docker, Jenkins, SonarQube)
+        <br>• Configure LAMP/WAMP stacks and Linux user management
+        <br>• Troubleshoot server slowness, software issues, and OS-level problems
+        <br>• Configure SSH, VPN access, and remote developer environments
+      </p>
+    </div>
+  </div>
+</section>
 
-<!-- SKILLS -->
-<div class="card">
-<h2>⚙️ Skills</h2>
-<p><span class="cmd">$ skills --list</span></p>
-<p>Docker • Kubernetes • Jenkins • AWS (EC2, S3, IAM, VPC, RDS) • Linux • Helm • Argo CD • Git • Bash • Ansible (basic)</p>
-</div>
+<section>
+  <h2 class="section-title">Problems I Solved</h2>
 
-<!-- EXPERIENCE -->
-<div class="card">
-<h2>🧠 Experience</h2>
-<p><span class="cmd">$ daily_work</span></p>
-<p>
-• Developer environment setup (PHP, MySQL, Elasticsearch, Docker, Jenkins, SonarQube)<br>
-• Linux server management & troubleshooting<br>
-• User management & system configuration<br>
-• Handling production-level issues & debugging<br>
-</p>
-</div>
+  <div class="block">
+    <h3>Reducing Manual Setup Time</h3>
+    <p>
+      Developer setups were highly manual and repetitive. I coordinated implementation of Ansible automation in the local network,
+      reducing setup time by ~40%.
+    </p>
+  </div>
 
-<!-- PROJECT 1 -->
-<div class="card">
-<h2>🚀 CI/CD Pipeline</h2>
+  <div class="block">
+    <h3>Running Unsupported Software via Docker</h3>
+    <p>
+      Some tools were not supported directly on host machines. I used Docker to containerize them and provided access instructions
+      to developers, improving compatibility and reducing dependency issues.
+    </p>
+  </div>
 
-<div class="project">
-<p><span class="cmd">$ deploy pipeline</span></p>
-<p><b>Flow:</b><br>
-GitHub → Jenkins → Docker → Test → Push → Helm → Kubernetes</p>
+</section>
 
-<p><b>Features:</b><br>
-• End-to-end CI/CD automation<br>
-• Auto rollback using Helm<br>
-• Rollout validation using kubectl<br>
-• Email notifications<br>
-• Docker-based testing</p>
+<section>
+  <h2 class="section-title">Projects</h2>
 
-<p><b>Impact:</b><br>
-Fixed false deployment success issue using rollout verification</p>
-</div>
+  <div class="block">
+    <h3>End-to-End CI/CD Pipeline</h3>
+    <div class="flow">GitHub → Jenkins → Docker → Test → Push → Helm → Kubernetes</div>
+    <p>
+      Built a full CI/CD pipeline to demonstrate automated build, test, and deployment workflow.
+    </p>
+    <ul>
+      <li>Automated Docker build and testing using health endpoint</li>
+      <li>Image push to DockerHub after validation</li>
+      <li>Helm deployment with auto rollback</li>
+      <li>Email notifications with logs, image tag, and build number</li>
+    </ul>
+    <p><b>Key Challenge:</b> Cleaning test containers — solved using advanced Docker cleanup commands to ensure pipeline stability.</p>
+  </div>
 
-</div>
+  <div class="block">
+    <h3>GitOps CI/CD Pipeline</h3>
+    <div class="flow">Jenkins → Docker → GitOps Repo → ArgoCD → Kubernetes</div>
+    <p>
+      Implemented GitOps workflow where Git is the single source of truth and Argo CD ensures cluster state consistency.
+    </p>
+    <ul>
+      <li>Jenkins builds and tests image</li>
+      <li>Updates values.yaml in GitOps repo</li>
+      <li>Argo CD detects change and syncs cluster</li>
+      <li>Separation of app repo and manifest repo</li>
+    </ul>
+  </div>
 
-<!-- PROJECT 2 -->
-<div class="card">
-<h2>⚡ GitOps Pipeline</h2>
+</section>
 
-<div class="project">
-<p><span class="cmd">$ gitops deploy</span></p>
+<section>
+  <h2 class="section-title">What Drives Me</h2>
+  <p>
+    I enjoy Linux troubleshooting, debugging real issues, and automating repetitive tasks. Currently focused on advancing Kubernetes
+    and cloud (AWS) skills.
+  </p>
+</section>
 
-<p><b>Flow:</b><br>
-Jenkins → Docker → GitOps Repo → ArgoCD → Kubernetes</p>
+<section class="contact">
+  <h2 class="section-title">Contact</h2>
+  <a href="mailto:gautamdevgrover@gmail.com">gautamdevgrover@gmail.com</a>
+  <a href="https://github.com/gautamdevgrover">GitHub</a>
+  <a href="https://www.linkedin.com/in/gautam-dev-094b1a26a/">LinkedIn</a>
+</section>
 
-<p><b>Features:</b><br>
-• Git as single source of truth<br>
-• Auto sync using Argo CD<br>
-• Health check before deploy<br>
-• Separate app & manifest repo</p>
-
-<p><b>Demo:</b><br>
-Push → Build → Update values.yaml → ArgoCD sync → App live</p>
-
-</div>
-
-</div>
-
-<!-- DIFFERENTIATOR -->
-<div class="card">
-<h2>🔥 Strength</h2>
-<p><span class="cmd">$ mindset</span></p>
-<p>Linux-first mindset with strong troubleshooting skills. Able to debug real-world system issues and automate workflows efficiently.</p>
-</div>
-
-<!-- CONTACT -->
-<div class="card">
-<h2>📞 Contact</h2>
-<p><span class="cmd">$ connect</span></p>
-
-<p>Email: <a href="mailto:gautamdevgrover@gmail.com">gautamdevgrover@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/gautamdevgrover">github.com/gautamdevgrover</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/gautam-dev-094b1a26a/">linkedin.com/in/gautam-dev</a></p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer">⚡ Built with DevOps mindset</div>
+<footer>Built with DevOps mindset ⚡</footer>
 
 <script>
-const roles=[
-"DevOps Engineer",
-"Linux Troubleshooter",
-"Kubernetes Enthusiast",
-"CI/CD Builder"
-];
-
-let i=0,j=0,current='',del=false;
-
-function type(){
- current=roles[i];
- document.getElementById('typing').innerHTML=current.substring(0,j);
-
- if(!del && j++===current.length){
-  del=true;
-  setTimeout(type,1000);
-  return;
- }
-
- if(del && j--===0){
-  del=false;
-  i=(i+1)%roles.length;
- }
-
- setTimeout(type,del?40:80);
-}
-
-type();
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+let p=[];
+for(let i=0;i<120;i++){p.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2,dx:(Math.random()-0.5)*0.6,dy:(Math.random()-0.5)*0.6})}
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);p.forEach(a=>{a.x+=a.dx;a.y+=a.dy;ctx.beginPath();ctx.arc(a.x,a.y,a.r,0,Math.PI*2);ctx.fillStyle='#00ff88';ctx.fill()});requestAnimationFrame(draw)}draw();
 </script>
 
 </body>
